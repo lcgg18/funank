@@ -3,9 +3,9 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
+
+      <main >
+          <Image
           src="/1.png"
           alt="Funank logo"
           width={250}
@@ -15,7 +15,8 @@ export default function Home() {
         <h1>
           Pagina en Construcción.
         </h1>
+        
       </main>
-    </div>
+
   );
 }

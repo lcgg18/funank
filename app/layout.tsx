@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FUNANK",
-  description: "Sitio web de la fundacion",
+  description: "Sitio Web de la fundacion",
 };
 
 export default function RootLayout({
