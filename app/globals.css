@@ -40,3 +40,12 @@ a {
     color-scheme: dark;
   }
 }
+
+h1{
+  font-size:xx-large ;
+}
+
+image{
+  align-items: center;
+  justify-items: center;
+}

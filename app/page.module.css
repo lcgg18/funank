@@ -46,6 +46,7 @@
 
 .main li:not(:last-of-type) {
   margin-bottom: 8px;
+  font-size: 45px;
 }
 
 .main code {
@@ -107,6 +108,11 @@ a.secondary {
   flex-shrink: 0;
 }
 
+.main image {
+  align-items: center;
+  justify-content: center;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
@@ -160,8 +166,3 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-}
