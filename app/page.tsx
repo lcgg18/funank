@@ -23,7 +23,7 @@ export default function Home() {
 
       <div className="textcon">
 
-        Bienvenidos a FUNANK 
+        <b>Bienvenidos a FUNANK </b>
         
         <br /><br />
 
