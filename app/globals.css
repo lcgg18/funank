@@ -1,30 +1,33 @@
 html,
 body {
+    display: flex;
     flex-direction: column;
-    flex: 1;
     background-color: #ffffff;
     font-family: Helvetica, Arial, sans-serif;
-    margin: 5px;
-    padding: 2px;
-   
-
-
+    margin: 0px;
+    padding: 10px;
 }
 
 h1{
-    display: flex;
+   
     color: #f828af;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    display: flex;
 }
 
 
 main {
-    min-height: 90vh;
+    height: 90vh;
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
+.texto{
+    text-align: justify;
+}
 .nav {
 
     display: flex;
@@ -64,17 +67,15 @@ main {
 }
 
 .footer {
-    background-color: #f828afa0 ;
+    background-color: #f828af ;
     color: #ffffff;
     font-family: 'Lucida Grande';
     font-size: 1rem;
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
+    padding: 3px;
     
-
 }
 
 .imagen{
@@ -85,4 +86,9 @@ main {
     padding: 0.5rem;
     width: 100%;
     height: auto;
+}
+
+.textcon{
+    margin: 2rem;
+    text-align: justify;
 }
