@@ -1,13 +1,16 @@
 
+
 export default function GlobalLayout({
- children
+  children
 }: {
- children: React.ReactNode;
+  children: React.ReactNode;
 }) {
   return (
-    <div>
-      <h1>Hello Root Layout Global</h1>
-      {children}
-    </div>
+    <>
+      <main>
+        <h1>Layout Global</h1>
+        {children}
+      </main>
+    </>
   );
 }
