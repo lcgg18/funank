@@ -92,3 +92,92 @@ main {
     margin: 2rem;
     text-align: justify;
 }
+
+
+        :root {
+          --bg: #ffffff;
+          --surface: #0b1220; /* fondo navbar */
+          --text: #e7eaf3;
+          --muted: #aab3c5;
+          --brand: #6aa5ff;
+          --ring: #8ab6ff88;
+        }
+
+        .site-header { position: sticky; top: 0; z-index: 50; }
+
+        .skip {
+          position: absolute; left: -9999px; top: -9999px;
+        }
+        .skip:focus { left: 1rem; top: 1rem; background: #fff; color: #111;
+          padding: .5rem .75rem; border-radius: .5rem; outline: 2px solid var(--brand);
+        }
+
+        .navbar {
+          display: grid; grid-template-columns: auto 1fr; align-items: center;
+          gap: 1rem; padding: .75rem 1rem; background: var(--surface);
+          box-shadow: 0 6px 24px rgba(0,0,0,.25);
+        }
+
+        .brand { display: flex; align-items: center; }
+        .brand-link { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; }
+        .logo { display: grid; place-items: center; width: 32px; height: 32px;
+          border-radius: 999px; background: linear-gradient(135deg, var(--brand), #93c5fd);
+          color: #0b1220; font-weight: 900; }
+        .brand-name { color: var(--text); font-weight: 700; letter-spacing: .3px; }
+
+        .hamburger { margin-left: auto; display: inline-flex; flex-direction: column; gap: 4px;
+          background: transparent; border: 0; cursor: pointer; padding: .25rem; border-radius: .5rem;
+        }
+        .hamburger:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
+        .bar { width: 24px; height: 2px; background: var(--text); display: block; }
+
+        .menu { list-style: none; margin: 0; padding: 0; display: none; }
+        .menu.open { display: grid; grid-auto-rows: min-content; padding: .5rem; }
+        .menu li { margin: .25rem 0; }
+
+        .item { color: var(--muted); text-decoration: none; padding: .5rem .75rem; border-radius: .6rem;
+          display: inline-flex; align-items: center; gap: .5rem; border: 1px solid transparent;
+          transition: border-color .15s ease, background .15s ease, color .15s ease;
+        }
+        .item:hover { color: var(--text); background: rgba(255,255,255,.06); }
+        .item:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
+        .active { color: var(--text); border-color: rgba(255,255,255,.18); background: rgba(255,255,255,.08); }
+
+        .dropdown { position: relative; }
+        .dropdown-btn span { font-size: .9em; opacity: .85; }
+        .panel { position: static; display: none; margin: .25rem 0 0; padding: .25rem;
+          background: rgba(255,255,255,.06); border-radius: .75rem; }
+        .panel.show { display: grid; }
+        .panel-item { display: block; padding: .5rem .75rem; color: var(--text); text-decoration: none;
+          border-radius: .5rem; }
+        .panel-item:hover { background: rgba(255,255,255,.08); }
+
+        .cta-wrap { margin-top: .5rem; }
+        .cta { background: var(--brand); color: #0b1220; font-weight: 700; border-radius: .8rem;
+          padding: .6rem .9rem; text-decoration: none; display: inline-flex; align-items: center; }
+        .cta:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+        /* >= 900px: menú horizontal */
+        @media (min-width: 900px) {
+          .navbar { grid-template-columns: auto 1fr auto; }
+          .hamburger { display: none; }
+          .menu { display: flex; align-items: center; gap: .25rem; justify-content: end; }
+          .menu li { margin: 0; }
+          .dropdown:hover .panel { display: block; position: absolute; top: 100%; left: 0;
+            min-width: 220px; background: #111827; border: 1px solid rgba(255,255,255,.12);
+            box-shadow: 0 12px 32px rgba(0,0,0,.35); padding: .4rem; }
+          .panel { border-radius: 1rem; }
+          .cta-wrap { margin-left: .5rem; }
+        }
+
+        /* Soporte para modo claro del sitio (opcional) */
+        @media (prefers-color-scheme: light) {
+          :root { --surface: #ffffff; --text: #0f172a; --muted: #334155; --ring: #2563eb55; }
+          .navbar { box-shadow: 0 6px 24px rgba(2,6,23,.08); border-bottom: 1px solid #e2e8f0; }
+          .item:hover { background: rgba(2,6,23,.04); }
+          .active { background: rgba(2,6,23,.06); border-color: rgba(2,6,23,.12); }
+          .panel { background: #ffffff; }
+          .panel-item:hover { background: rgba(2,6,23,.06); }
+        }
+     
+  
