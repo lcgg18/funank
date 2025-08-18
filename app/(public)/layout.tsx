@@ -1,3 +1,4 @@
+import { Lema } from '../../components/lema/Lema';
 
 
 export default function GlobalLayout({
@@ -8,7 +9,7 @@ export default function GlobalLayout({
   return (
     <>
       <main>
-        <h1>Layout Global</h1>
+        <Lema/>
         {children}
       </main>
     </>

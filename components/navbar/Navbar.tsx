@@ -8,7 +8,7 @@ import Image from "next/image";
 // indicador de ruta activa, menú móvil con teclado, y dropdown.
 // CSS está incluido con styled-jsx para que puedas copiar/pegar en un solo archivo.
 
-export default function Navbar() {
+export const Navbar= () => {
   const [open, setOpen] = React.useState(false);
   const navRef = React.useRef<HTMLDivElement | null>(null);
   const pathname = usePathname?.() || "";
@@ -23,7 +23,7 @@ export default function Navbar() {
     function onClickOutside(e: MouseEvent) {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpen(false);
-        
+
       }
     }
     document.addEventListener("mousedown", onClickOutside);
@@ -35,7 +35,7 @@ export default function Navbar() {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") {
         setOpen(false);
-        
+
       }
     }
     document.addEventListener("keydown", onKey);
@@ -47,28 +47,26 @@ export default function Navbar() {
     { href: "/servicios", label: "Servicios" },
     { href: "/about", label: "Quienes Somos" },
     { href: "/contact", label: "Contacto" }
-    
+
   ];
 
   return (
-   
-    
-<div>
 
-      <a href="#contenido" className="skip">Saltar al contenido</a>
+
+    <div>
 
       <nav className="navbar" aria-label="Principal">
         <div className="brand">
           <Link href="/" aria-label="Ir al inicio" className="brand-link">
-            
-        <Image
-        src="/1.png"
-        alt="Funank logo"
-        width={80}
-        height={60}
-        priority
-        />
-            
+
+            <Image
+              src="/1.png"
+              alt="Funank logo"
+              width={64}
+              height={64}
+              priority
+            />
+
           </Link>
         </div>
 
@@ -99,7 +97,7 @@ export default function Navbar() {
           ))}
         </ul>
       </nav>
-</div>
+    </div>
   )
-      
+
 }

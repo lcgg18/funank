@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import  { AboutCards } from "@/components";
 
 
 export const metadata: Metadata = {
@@ -9,8 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage(){
     return(
-        <>
-        <span>About Page</span>
-        </>
+       
+        <AboutCards/>
     )
 }
