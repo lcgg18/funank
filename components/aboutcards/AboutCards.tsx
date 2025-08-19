@@ -1,5 +1,5 @@
 "use client";
-import styles from "../../style/ModernCards.module.css";
+import styles from "../../style/AboutCards.module.css";
 import { motion } from 'framer-motion';
 
 const ITEMS = [

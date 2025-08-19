@@ -103,7 +103,15 @@ main {
   --muted: #3d3f44;
   --brand: #5a8bd4;
   --ring: #5594f888;
-}
+
+    --color-primary: #f1b42f; 
+    --color-accent: #f828af;  
+    --color-bg: #ffffff;
+    --color-card: #fffdf8;
+    --color-text: rgb(105, 166, 179);
+    --color-muted: #555555;
+  }
+
 
 .site-header {
   position: sticky;
