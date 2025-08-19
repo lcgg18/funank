@@ -1,4 +1,5 @@
 
+import { Formulario } from "@/components";
 import type { Metadata } from "next";
 
 
@@ -10,8 +11,6 @@ export const metadata: Metadata = {
 
 export default function ContactPage(){
     return(
-        <>
-        <span>Contact Page</span>
-        </>
+        < Formulario />
     )
 }

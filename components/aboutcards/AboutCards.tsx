@@ -13,7 +13,7 @@ const ITEMS = [
     },
     {
         titulo: "Valores",
-        descripcion: "Calidad, Participacion y Respponsabilidad. "
+        descripcion: "Calidad, Participacion y Responsabilidad. "
 ,
     },
 ];

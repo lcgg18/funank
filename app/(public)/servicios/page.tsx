@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
- title: 'pricing',
+ title: 'Servicio',
  description: 'Servicios que presta la fundacion',
- keywords:['service','princing page','fundacion','internado','apoyo psicosocial'],
+ keywords:['service','service page','fundacion','internado','apoyo psicosocial'],
 };
 
-export default function PricingPage(){
+export default function ServicePage(){
     return(
         <>
         < ServiceCards/>
