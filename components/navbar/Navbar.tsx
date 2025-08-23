@@ -62,8 +62,8 @@ export const Navbar= () => {
             <Image
               src="/1.png"
               alt="Funank logo"
-              width={600}
-              height={200}
+              width={150}
+              height={60}
               priority
             />
 
